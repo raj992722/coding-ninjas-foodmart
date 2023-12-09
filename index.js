@@ -74,7 +74,7 @@ function displayMeals(meals) {
       mealCard.classList.add(..."card mb-3".split(" "));
 
       const mealImage = document.createElement("img");
-      mealImage.classList.add("img-thumbnail");
+      mealImage.classList.add("img-thumbnail",'float-left');
       mealImage.src = meal.strMealThumb;
       mealImage.alt = meal.strMeal;
       mealCard.appendChild(mealImage);
