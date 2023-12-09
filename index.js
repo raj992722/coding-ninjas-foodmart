@@ -49,7 +49,7 @@ function displayFavorites() {
 
       const btn = document.createElement("button");
       btn.innerText = "Remove";
-      btn.className = "fav-btn btn ml-4";
+      btn.classList.add(..."fav-btn btn ml-4".split(' '));
       btn.dataset.mealId = meal.idMeal;
 
       favoriteItem.appendChild(btn);
@@ -71,32 +71,32 @@ function displayMeals(meals) {
   if (meals) {
     meals.forEach((meal) => {
       const mealCard = document.createElement("div");
-      mealCard.className = "card mb-3";
+      mealCard.classList.add(..."card mb-3".split(" "));
 
       const mealImage = document.createElement("img");
-      mealImage.className = "img-thumbnail";
+      mealImage.classList.add("img-thumbnail");
       mealImage.src = meal.strMealThumb;
       mealImage.alt = meal.strMeal;
       mealCard.appendChild(mealImage);
 
       const mealCardBody = document.createElement("div");
-      mealCardBody.className = "card-body";
+      mealCardBody.classList.add("card-body");
       mealCard.appendChild(mealCardBody);
 
       const btn = document.createElement("button");
       btn.innerText = "Add to favourite";
-      btn.className = "fav-btn btn btn-secondary";
+      btn.classList.add(..."fav-btn btn btn-secondary".split(" "));
       btn.dataset.mealId = meal.idMeal;
 
       mealCardBody.appendChild(btn);
 
       const mealTitle = document.createElement("h5");
-      mealTitle.className = "card-title";
+      mealTitle.classList.add("card-title");
       mealTitle.textContent = meal.strMeal;
       mealCardBody.appendChild(mealTitle);
 
       const mealInstructions = document.createElement("p");
-      mealInstructions.className = "card-text";
+      mealInstructions.classList.add("card-text");
       mealInstructions.textContent = meal.strInstructions;
       mealCardBody.appendChild(mealInstructions);
 
