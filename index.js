@@ -111,19 +111,22 @@ function displayMeals(meals) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
+  console.log(searchInput);
 
-  const badge=document.getElementsByClassName("badge");
-  badge[0].textContent=favoriteMeals.length>0 ? favoriteMeals.length:0;
+  // const badge=document.getElementsByClassName("badge");
+  // badge[0].textContent=favoriteMeals.length>0 ? favoriteMeals.length:0;
   
 
   displayFavorites();
 
   
 
-  searchInput.addEventListener("input", () => {
+  searchInput.addEventListener("change", () => {
     const searchTerm = searchInput.value.trim();
+    console.log(searchTerm);
     if (searchTerm !== "") {
       fetchMeals(searchTerm).then((meals) => {
+        console.log(meals);
         displayMeals(meals);
         displayFavorites();
       });
