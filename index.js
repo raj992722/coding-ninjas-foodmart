@@ -39,8 +39,8 @@ function displayFavorites() {
   const favoriteList = document.getElementById("favoriteList");
   favoriteList.innerHTML = "";
 
-  const badge=document.getElementsByClassName("badge");
-  badge[0].textContent=favoriteMeals.length>0 ? favoriteMeals.length:0;
+  // const badge=document.getElementsByClassName("badge");
+  // badge[0].textContent=favoriteMeals.length>0 ? favoriteMeals.length:0;
 
   if (favoriteMeals.length > 0) {
     favoriteMeals.forEach((meal) => {
